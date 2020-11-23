@@ -10,6 +10,8 @@ const columns = [
       title: 'Nombre',
       dataIndex: 'nombre',
       key: 'nombre',
+      fixed: 'left',
+      width: 120,
     },
     {
       title: 'Título',
@@ -52,9 +54,11 @@ export const InfoPonentes = () => {
                   </div>
                   <div className="card-body">
                       <Table 
-                          columns={columns} 
-                          dataSource={data} 
-                          pagination={ {pageSize: 4} }
+                        columns={columns} 
+                        dataSource={data} 
+                        pagination={ {pageSize: 4} }
+                        scroll={{ x: 650 }}
+                        
                       />
                   </div>
               </div>

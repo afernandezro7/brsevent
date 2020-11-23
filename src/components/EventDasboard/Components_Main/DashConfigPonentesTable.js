@@ -24,7 +24,7 @@ export const DashConfigPonentesTable = () => {
 
                 <div className="card">
                     <div className="card-header">
-                        <h2 className="text-secundary title1">Usuarios Registrados</h2>
+                        <h2 className="text-secundary title1">Ponentes Registrados</h2>
 
                         <Table 
                             dataSource={
@@ -40,8 +40,9 @@ export const DashConfigPonentesTable = () => {
                                         })
                                 )
                             }
+                            scroll={{ x: 650 }}
                         >
-                            <Column title="Nombre" dataIndex="name" key="name" />
+                            <Column title="Nombre" dataIndex="name" key="name" width="50" fixed="left"/>
                             <Column title="Título" dataIndex="title" key="title" />
                             <Column title="Tema" dataIndex="topic" key="topic" />
                             <Column title="País" dataIndex="country" key="country" />

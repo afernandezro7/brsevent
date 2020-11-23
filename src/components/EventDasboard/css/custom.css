@@ -8,6 +8,9 @@
 .navbar-top-links {
     margin-right: 0;
 }
+#page-wrapper{
+    margin-bottom: 80px;
+}
 
 .navbar-top-links li {
     display: inline-block;
@@ -16,6 +19,7 @@
 .navbar-top-links li:last-child {
     margin-right: 15px;
 }
+
 
 .navbar-top-links li a {
     padding: 15px;
@@ -117,4 +121,101 @@
 
 .header-right .dropdown-toggle::after {
     content: none;   
+}
+
+
+div.anchor-div{
+    cursor:pointer;
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    -webkit-text-decoration-skip: objects;
+}
+.sidebar-menu div.anchor-div {
+    color: #b8c7ce;
+    text-decoration: none;
+}
+
+.sidebar-menu > li:hover > div.anchor-div, 
+.sidebar-menu > li.active > div.anchor-div {
+	color: #fff;
+	background: #1e282c;
+	border-left-color: #3c8dbc;
+}
+
+.sidebar-menu > li > div.anchor-div{
+	padding: 12px 5px 12px 15px;
+	display: block;
+	font-size: 14px;
+	border-left: 3px solid transparent;
+}
+
+.sidebar-menu > li:hover > div.anchor-div, .sidebar-menu > li.active > div.anchor-div {
+    color: #fff;
+}
+
+.sidebar-menu .treeview-menu > li > div.anchor-div {
+    padding: 5px 5px 5px 15px;
+    display: block;
+    font-size: 14px;
+    color: #8aa4af;
+}
+
+body div.anchor-div {
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+	text-decoration: none;
+}
+body div.anchor-div:hover {
+    color: #0056b3;
+}
+
+.sidebar-menu .treeview-menu > li > div.anchor-div > .fa,
+.sidebar-menu .treeview-menu > li > div.anchor-div > .fas {
+    width: 20px;
+}
+
+.sidebar-menu .treeview-menu > li.active > div.anchor-div, 
+.sidebar-menu .treeview-menu > li > div.anchor-div:hover {
+    color: #fff;
+}
+
+.dropdown-menu > li > div.anchor-div {
+    padding: 3px 15px;
+    font-size: 1em;
+    letter-spacing: .5px;
+}
+
+.dropdown-menu > li > div.anchor-div {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: normal;
+	line-height: 1.42857143;
+	color: #333;
+	white-space: nowrap;
+}
+
+ul.dropdown-menu.drp-mnu i.fa, 
+ul.dropdown-menu.drp-mnu i.fas {
+	margin-right: 0.5em;
+	color: #629aa9;
+}
+
+.profile_details li div.anchor-div i.fa.lnr {
+    position: absolute;
+    top: 34%;
+    right: 8%;
+    color: #333;
+    font-size: 1.6em;
+}
+.profile_details_drop div.anchor-div.dropdown-toggle {
+    display: block;
+    padding: 0.2em 3em 0 0em;
 }

@@ -5,7 +5,7 @@
 import { types } from "../types/types";
 
 const initialState = {
-    activePg: 'info',
+    activePg: 'info'
 }
 
 export const pageReducer = (state= initialState, action) =>{

@@ -37,8 +37,9 @@ export const DashRegTable = () => {
                                         })
                                 )
                             }
+                            scroll={{ x: 650 }}
                         >
-                            <Column title="Nombre" dataIndex="name" key="name" />
+                            <Column title="Nombre" dataIndex="name" key="name" width="50" fixed="left"/>
                             <Column title="Email" dataIndex="email" key="email" />
                             <Column title="Role" dataIndex="role" key="role" />
                             <Column

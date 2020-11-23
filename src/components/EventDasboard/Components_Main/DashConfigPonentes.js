@@ -10,29 +10,28 @@ import { useForm } from '../../../hooks/useForm'
 import { UploadPics } from '../../ui/UploadPics'
 import { startAddNewSpeaker } from '../../../redux/actions/speakerActions'
 
-
+const formInitialState= {
+    formName: '',
+    formUser: '',
+    formEmail: '',
+    formTitle: '',
+    formPassword: '',
+    formPassword2: '',
+    formTopic: '',
+    formCountry: ''
+}
+const imgInitialState= {
+    isLoaded: false,
+    imgFile:'',
+    tempUrl: null
+}
 
 export const DashConfigPonentes = () => {
 
-    const [formvalues, handleInputChange] = useForm({
-        formName: 'Armando Casas',
-        formUser: 'Armando',
-        formEmail: 'arnansdfsdfdezo7@gmail.com',
-        formTitle: 'Constructor',
-        formPassword: '123456',
-        formPassword2: '123456',
-        formTopic: 'Educación Física',
-        formCountry: 'Cuba'
-    })
+    const [formvalues, handleInputChange, reset] = useForm(formInitialState)
     const {formName,formUser,formEmail, formTitle,formPassword, formTopic, formCountry, formPassword2} = formvalues
-
-    const [formWhatsapp, setformWhatsapp] = useState('+5352345432')
-
-    const [formImage, setimageValue] = useState({
-        isLoaded: false,
-        imgFile:'',
-        tempUrl: null
-    })
+    const [formWhatsapp, setformWhatsapp] = useState('+53')
+    const [formImage, setimageValue] = useState(imgInitialState)
     const {imgFile, tempUrl} = formImage
 
     const dispatch = useDispatch();
@@ -61,10 +60,15 @@ export const DashConfigPonentes = () => {
                 userName: formUser,
                 password: formPassword,
                 email: formEmail,
-                img: imgFile.name || '',
+                archive: imgFile,
                 role: "USER_ROLE"  
             }
         }))
+
+        // Reset Forms values
+        reset()
+        setimageValue(imgInitialState)
+
 
       
     }

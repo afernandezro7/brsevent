@@ -6,8 +6,8 @@ import { startLogin } from '../../redux/actions/authActions'
 export const LoginForm = () => {
 
     const [formvalues, handleInputChange] = useForm({
-        email: 'anabelsg9@gmail.com',
-        password:'123456'
+        email: '',
+        password:''
     })
     const { email , password }= formvalues
     

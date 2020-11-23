@@ -128,7 +128,7 @@ span.dashboard_text {
 }
 
 /* ----menu-icon----*/
-button#showLeftPush {
+#showLeftPush {
   font-size: 1.1em;
   text-align: center;
   cursor: pointer;
@@ -144,6 +144,7 @@ button#showLeftPush {
   height: 40px;
   width: 40px;
   margin-top: 11px;
+  margin-left: 25px;
 }
 
 button#showLeftPush:hover {
@@ -197,7 +198,7 @@ button#showLeftPush:hover {
 }
 
 .cbp-spmenu-push.cbp-spmenu-push-toright div#page-wrapper {
-  margin: 0;
+  margin: 0 0 80px 0;
 }
 
 /*--//push-menu-css--*/
@@ -8725,7 +8726,7 @@ h4.asd label {
   }
 
   .cbp-spmenu-push div#page-wrapper {
-    margin: 0;
+    margin: 0 0 80px 0;
   }
 
   .cbp-spmenu-left.cbp-spmenu-open {

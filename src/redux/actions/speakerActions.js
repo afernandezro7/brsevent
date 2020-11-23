@@ -51,7 +51,7 @@ export const startAddNewSpeaker = (speaker) =>{
             const speakerToDB = {
                 ...speaker,
                 usuario:{
-                    uid: activeUser.uid
+                    ...activeUser
                 }
             }
     

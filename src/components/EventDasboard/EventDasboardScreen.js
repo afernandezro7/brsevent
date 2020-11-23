@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AsideMenu } from './Components_Aside/AsideMenu';
+import { AsideMenuScreen } from './Components_Aside/AsideMenuScreen';
 import { StickyHeader } from './Components_StickyNavbar/StickyHeader';
 
 import './css/bootstrap.css'
@@ -46,7 +46,7 @@ export const EventDasboardScreen = () => {
         >
             <div className="main-content">
                 {/* ASIDE-MENU */}
-		        <AsideMenu
+		        <AsideMenuScreen
                     toggleAside={toggleAside}
                 />
 

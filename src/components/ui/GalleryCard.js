@@ -5,7 +5,7 @@ import { Card, Button } from 'antd';
 
 const { Meta } = Card;
 
-export const GalleryCard = ( { isLoaded, urlImg , cardTitle, formAlt, cardInfo, action=false, actionName, onBntClick, cardClick } ) => {
+export const GalleryCard = ( { isLoaded, urlImg , cardTitleName="Título" ,cardTitle, formAlt, cardInfoName="Descripción",cardInfo, action=false, actionName, onBntClick, cardClick } ) => {
 
 
     return (
@@ -21,8 +21,8 @@ export const GalleryCard = ( { isLoaded, urlImg , cardTitle, formAlt, cardInfo, 
                 onClick={ cardClick }
             >
                 <Meta 
-                    title={`Título: ${cardTitle}`} 
-                    description={`Descripción: ${cardInfo}`}                     
+                    title={`${cardTitleName}: ${cardTitle}`} 
+                    description={`${cardInfoName}: ${cardInfo}`}                     
                 />
                 
                 {

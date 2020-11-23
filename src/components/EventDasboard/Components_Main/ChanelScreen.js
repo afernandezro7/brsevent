@@ -22,13 +22,13 @@ export const ChanelScreen = () => {
                         height='80%'
                     />
 
+                </div>
                     <div className="widget-shadow">
         
                         <div className="well">
                            <b className="text-primary title1">Info:</b> { activeCH.description }
                         </div>
                     </div>
-                </div>
             </div>
         </>
     )

@@ -9,10 +9,10 @@ export const DashConfigChannels = () => {
     const { speakers } = useSelector( state => state.speaker );
     const dispatch = useDispatch()
 
-    const [formvalues, handleInputChange] = useForm({
-        channelTitle: 'Sala No.1',
-        channelSRC: 'https://www.youtube.com/watch?v=YbKhyMbKSrQ',
-        channelDescription : 'Esta es una Pequeña descripcion de la Conferencia'
+    const [formvalues, handleInputChange, reset] = useForm({
+        channelTitle: '',
+        channelSRC: '',
+        channelDescription : ''
     })
     const {channelTitle, channelSRC, channelDescription } = formvalues   
     const [multiSelectValue, setselectValue] = useState([])
@@ -40,7 +40,9 @@ export const DashConfigChannels = () => {
 
        dispatch(startAddNewChannel(channelCreated))
 
-
+       // Reset forms Values
+       reset()
+       setselectValue([])
     }
 
     return (
@@ -79,7 +81,7 @@ export const DashConfigChannels = () => {
                                     <input
                                         type="text"
                                         className={`${ (isValidForm || !!channelSRC) ? 'form-control' : 'form-control is-invalid'}`}
-                                        placeholder="Fuente de Streaming"
+                                        placeholder="Streaming Ej:[https://www.youtube.com/watch?v=YbKhyMbKSrQ]"
                                         name= "channelSRC"
                                         value= { channelSRC } 
                                         onChange= { handleInputChange }                                   
