@@ -14,7 +14,7 @@ export const LoginScreen = () => {
                     <LoginForm/>
 
                     <p className="signup">No te haz registrado aún?
-                        <a href="#signup.html" className="signuplink">Ofertas</a>
+                        <a href="https://www.cubaforevents.com/evento/cubamotricidad-2020/#detail-tab-tickets" target="_blank" rel="noreferrer" className="signuplink">Ofertas</a>
                     </p>
                 </div>
 

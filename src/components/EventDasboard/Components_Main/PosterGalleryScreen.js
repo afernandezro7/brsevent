@@ -17,10 +17,28 @@ export const PosterGalleryScreen = () => {
         setmodalVisible(true)
     }
 
-    const handleOkModal=()=>{
+    const handleCancelModal=()=>{
         setmodalVisible(false)
         dispatch(posterUnSetActiveAction());
     }
+
+    const handleDownload=(url)=>{        
+       // window.open(url)
+        let link = document.createElement("a");
+        link.download = "poster_cubamotricidad"; 
+        
+        fetch(url)
+        .then(res => res.blob()) // Gets the response and returns it as a blob
+        .then(blob => {
+            link.href = URL.createObjectURL(blob);
+            link.click();
+            URL.revokeObjectURL(link.href);
+
+
+        }).catch(err=> alert('intente nuevamente'))
+
+    }
+   
     
     return (
         <>
@@ -64,8 +82,9 @@ export const PosterGalleryScreen = () => {
                             width={600}
                             centered
                             visible={modalVisible}
-                            onOk={handleOkModal}
-                            onCancel={handleOkModal}
+                            onCancel={handleCancelModal}
+                            onOk={()=>handleDownload(activePoster.img)}
+                            okText={<i className="fa fa-download"></i>}
                         >
                             {
                                 !!activePoster
