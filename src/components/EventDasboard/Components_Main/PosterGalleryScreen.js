@@ -59,9 +59,10 @@ export const PosterGalleryScreen = () => {
                                                 <GalleryCard
                                                     isLoaded={true}
                                                     urlImg={poster.img}
-                                                    cardTitle={poster.title}
                                                     formAlt={poster.alt}
-                                                    cardInfo={poster.info}
+                                                    meta={false}
+                                                    //cardTitle={poster.title}
+                                                    //cardInfo={poster.info}
                                                     cardClick={()=>getPoster(poster.id)}
                                                 />
                                             </div>
@@ -92,9 +93,10 @@ export const PosterGalleryScreen = () => {
                                     <GalleryCard
                                         isLoaded={true}
                                         urlImg={activePoster.img}
-                                        cardTitle={activePoster.title}
                                         formAlt={activePoster.alt}
-                                        cardInfo={activePoster.info}
+                                        meta={false}
+                                        //cardTitle={activePoster.title}
+                                        //cardInfo={activePoster.info}
                                     />     
                             }
                         </Modal>
